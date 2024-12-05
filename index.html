@@ -1,23 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Web Sitesi</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Şık Blok Sayfası</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Merhaba Raspberry Pi!</h1>
-    </header>
-    <main>
-        <p>Bu, Raspberry Pi üzerinde çalışan basit bir web sitesidir. 🎉</p>
-        <button id="greetButton">Bana Tıkla!</button>
-        <p id="message"></p>
-    </main>
-    <footer>
-        <p>© 2024 Mini Web Sitesi</p>
-    </footer>
+    <div class="container">
+        <header>
+            <h1>Modern Blok Sayfası</h1>
+            <button id="theme-toggle">Karanlık Mod</button>
+        </header>
+        <main>
+            <section class="blok" id="blok1" onclick="openModal('blok1')">
+                <h2>Blok 1</h2>
+                <p>Bu blok, şık ve uyumlu bir tasarım örneğidir. Burada, bloklar arasındaki renk uyumuna dikkat edilmiştir.</p>
+            </section>
+            <section class="blok" id="blok2" onclick="openModal('blok2')">
+                <h2>Blok 2</h2>
+                <p>Bu bölümde farklı bir blok örneği bulunmaktadır. Tasarımda zarif bir renk paleti kullanılmıştır.</p>
+            </section>
+            <section class="blok" id="blok3" onclick="openModal('blok3')">
+                <h2>Blok 3</h2>
+                <p>Bu blokta da renklerin uyumu ve stilin sadeliği ön planda tutulmuştur. İyi bir kullanıcı deneyimi sağlanmıştır.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Şık Sayfa Tasarımı</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
